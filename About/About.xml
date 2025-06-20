@@ -22,6 +22,7 @@
   <loadAfter>
     <li>Ludeon.RimWorld.Biotech</li>
     <li>ceteam.combatextended</li>
+    <li>nalzurin.moremechanitormechs20</li>
   </loadAfter>
 
 

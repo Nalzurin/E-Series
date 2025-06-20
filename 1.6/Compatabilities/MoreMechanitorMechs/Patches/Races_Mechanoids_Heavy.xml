@@ -4,7 +4,7 @@
 	<!-- ========== Bastion ========== -->
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="Mech_Bastion"]/mechEnabledWorkTypes</xpath>
+		<xpath>Defs/ThingDef[defName="Mech_Bastion"]/race/mechEnabledWorkTypes</xpath>
 		<value>
       <mechEnabledWorkTypes>
         <li>Construction</li>
@@ -18,7 +18,7 @@
 	</Operation>
   <!-- ========== Gamma ========== -->
   <Operation Class="PatchOperationReplace">
-    <xpath>Defs/ThingDef[defName="Mech_Gamma"]/mechEnabledWorkTypes</xpath>
+    <xpath>Defs/ThingDef[defName="Mech_Gamma"]/race/mechEnabledWorkTypes</xpath>
     <value>
       <mechEnabledWorkTypes>
         <li>Mining</li>
