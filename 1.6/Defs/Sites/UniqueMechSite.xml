@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <SitePartDef Name="UniqueMechSiteParent" Abstract="true">
+
+    <siteTexture>Bastion/Other/repairjunk_icon</siteTexture>
+    <expandingIconTexture>Bastion/Other/repairjunk_icon</expandingIconTexture>
+    <approachOrderString>Approach {0}</approachOrderString>
+    <approachingReportString>Approach {0}</approachingReportString>
+    <requiresFaction>false</requiresFaction>
+    <ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
+    <showFactionInInspectString>false</showFactionInInspectString>
+    <applyFactionColorToSiteTexture>false</applyFactionColorToSiteTexture>
+    <arrivedLetterDef>NeutralEvent</arrivedLetterDef>
+    <wantsThreatPoints>true</wantsThreatPoints>
+    <disallowsAutomaticDetectionTimerStart>true</disallowsAutomaticDetectionTimerStart>
+    <considerEnteringAsAttack>false</considerEnteringAsAttack>
+    <workerClass>Bastion.SitePartWorker_UniqueMechSite</workerClass>
+    <tags>
+      <li>UniqueMechSite</li>
+    </tags>
+  </SitePartDef>
+
+  <!--Bastion-->
+  <SitePartDef ParentName="UniqueMechSiteParent">
+    <defName>Bastion_UniqueMechSiteBastion</defName>
+    <label>Unique mech site</label>
+    <description>The location of the unique mech wreck is here.</description>
+    <selectionWeight>4</selectionWeight>
+  </SitePartDef>
+
+  <GenStepDef>
+    <defName>GenStep_Bastion</defName>
+    <linkWithSite>Bastion_UniqueMechSiteBastion</linkWithSite>
+    <order>1600</order>
+    <genStep Class="Bastion.Bastion_GenStep_SpawnWreck">
+      <wreckDef>Bastion_AncientBastionJunk</wreckDef>
+    </genStep>
+  </GenStepDef>
+  
+  <!--Gamma-->
+  <SitePartDef ParentName="UniqueMechSiteParent">
+    <defName>Bastion_UniqueMechSiteGamma</defName>
+    <label>Unique mech site</label>
+    <description>The location of the unique mech wreck is here.</description>
+    <selectionWeight>1</selectionWeight>
+  </SitePartDef>
+
+  <GenStepDef>
+    <defName>GenStep_Gamma</defName>
+    <linkWithSite>Bastion_UniqueMechSiteGamma</linkWithSite>
+    <order>1600</order>
+    <genStep Class="Bastion.Bastion_GenStep_SpawnWreck">
+      <wreckDef>Bastion_AncientGammaJunk</wreckDef>
+    </genStep>
+  </GenStepDef>
+</Defs>

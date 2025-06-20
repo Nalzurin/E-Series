@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingCategoryDef>
+    <defName>Ammo_MicroRockets</defName>
+    <label>E-Micro Rockets</label>
+    <parent>AmmoHighCaliber</parent>
+    <iconPath>UI/Icons/ThingCategories/CaliberAutocannonLarge</iconPath>
+  </ThingCategoryDef>
+
+  <!-- ==================== AmmoSets ========================== -->
+
+  <CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_EMicroRockets</defName>
+    <label>E-Micro Rockets</label>
+    <ammoTypes>
+      <Ammo_EMicroRockets>Ammo_EMicroRockets</Ammo_EMicroRockets>
+    </ammoTypes>
+    <similarTo>AmmoSet_AntiMateriel</similarTo>
+  </CombatExtended.AmmoSetDef>
+
+
+  <!-- ==================== Ammo ========================== -->
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="MediumAmmoBase">
+    <defName>Ammo_EMicroRockets</defName>
+    <label>E-Micro Rockets</label>
+    <description>A Large caliber, gyrojet-stabilized projectile with an explosive charge.</description>
+    <statBases>
+      <Mass>0.201</Mass>
+      <Bulk>0.09</Bulk>
+    </statBases>
+    <tradeTags>
+      <li>CE_AutoEnableTrade</li>
+      <li>CE_AutoEnableCrafting</li>
+    </tradeTags>
+    <thingCategories>
+      <li>Ammo_MicroRockets</li>
+    </thingCategories>
+    <stackLimit>150</stackLimit>
+    <graphicData>
+      <texPath>Things/Ammo/Rocket/90mmHEAT</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <ammoClass>ExplosiveAP</ammoClass>
+    <cookOffProjectile>Bullet_EMicroRockets</cookOffProjectile>
+  </ThingDef>
+
+  <!-- ================== Projectiles ================== -->
+
+  <ThingDef ParentName="BaseBulletCE">
+    <defName>Bullet_EMicroRockets</defName>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <label>E-Micro Rockets</label>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <speed>100</speed>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>25</damageAmountBase>
+      <armorPenetrationSharp>100</armorPenetrationSharp>
+      <armorPenetrationBlunt>31.584</armorPenetrationBlunt>
+      <secondaryDamage>
+				<li>
+					<def>Bomb_Secondary</def>
+					<amount>20</amount>
+				</li>
+			</secondaryDamage>
+
+    </projectile>
+
+  </ThingDef>
+  <!-- ==================== Recipes ========================== -->
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_EMicroRockets</defName>
+    <label>make E Micro Rockets x50</label>
+    <description>Craft E Micro Rockets.</description>
+    <jobString>Making E Micro Rockets.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>50</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSX</li>
+          </thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+        <li>FSX</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_EMicroRockets>50</Ammo_EMicroRockets>
+    </products>
+    <workAmount>10400</workAmount>
+  </RecipeDef>
+
+</Defs>

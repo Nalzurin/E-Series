@@ -1,0 +1,71 @@
+<Defs>
+    <ThingDef ParentName="BaseGun">
+        <defName>Bastion_Minigun</defName>
+        <label>E-54 Siege Cannon</label>
+        <description>A rotating-cylinder, upscaled, extended barrel minigun designed specifically for use with E-54 units. Its massive recoil requires the ues of emplacement mounting - which the design of the E-54 conveniently makes mobile.</description>
+        <graphicData>
+            <texPath>Bastion/Weapons/Minigun</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <tradeability>None</tradeability>
+        <destroyOnDrop>true</destroyOnDrop>
+        <relicChance>0</relicChance>
+        <smeltable>false</smeltable>
+        <soundInteract>Interact_Rifle</soundInteract>
+        <equippedAngleOffset>90</equippedAngleOffset>
+        <equippedDistanceOffset>-0.25</equippedDistanceOffset>
+        <statBases>
+            <WorkToMake>60000</WorkToMake>
+            <Mass>10</Mass>
+            <AccuracyTouch>0.35</AccuracyTouch>
+            <AccuracyShort>0.55</AccuracyShort>
+            <AccuracyMedium>0.55</AccuracyMedium>
+            <AccuracyLong>0.40</AccuracyLong>
+            <RangedWeapon_Cooldown>2.3</RangedWeapon_Cooldown>
+        </statBases>
+        <weaponTags>
+            <li>BastionMinigun</li>
+        </weaponTags>
+        <equippedStatOffsets>
+            <MoveSpeed>-0.25</MoveSpeed>
+        </equippedStatOffsets>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bastion_Minigun_Bullet</defaultProjectile>
+                <warmupTime>2.5</warmupTime>
+                <range>30.9</range>
+                <burstShotCount>25</burstShotCount>
+                <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+                <soundCast>Shot_Minigun</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>barrels</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>11.7</power>
+                <cooldownTime>2.6</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+    
+    <ThingDef ParentName="BaseBullet">
+        <defName>Bastion_Minigun_Bullet</defName>
+        <label>bastion minigun bullet</label>
+        <graphicData>
+            <texPath>Things/Projectile/Bullet_Small</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>10</damageAmountBase>
+            <speed>70</speed>
+        </projectile>
+    </ThingDef>
+</Defs>

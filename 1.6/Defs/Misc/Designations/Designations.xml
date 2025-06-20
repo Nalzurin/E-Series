@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<DesignationDef>
+    <defName>Bastion_RestoreJunk</defName>
+    <texturePath>Bastion/Other/repairjunk_icon</texturePath>
+    <targetType>Thing</targetType>
+    <designateCancelable>true</designateCancelable>
+  </DesignationDef>
+  
+</Defs>

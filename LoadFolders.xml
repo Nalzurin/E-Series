@@ -7,4 +7,10 @@
     <li IfModActive="ceteam.combatextended">1.5/Compatabilities/CE</li>
     <li IfModActive="nalzurin.moremechanitormechs20">1.5/Compatabilities/MoreMechanitorMechs</li>
   </v1.5>
+  <v1.6>
+    <li>/</li>
+    <li>1.6</li>
+    <li IfModActive="ceteam.combatextended">1.6/Compatabilities/CE</li>
+    <li IfModActive="nalzurin.moremechanitormechs20">1.6/Compatabilities/MoreMechanitorMechs</li>
+  </v1.6>
 </loadFolders>

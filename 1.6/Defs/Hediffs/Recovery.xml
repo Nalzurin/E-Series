@@ -1,0 +1,36 @@
+<Defs>
+    <HediffDef>
+        <defName>Bastion_Recovery</defName>
+        <label>recovery mode</label>
+        <description>E-54 has activated self repair; Damage sustained is being recovered.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.52, 1, 0.95)</defaultLabelColor>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+            <li Class="Bastion.Bastion_MechRepair_CompProperties">
+                <Factor>25</Factor>
+            </li>
+        </comps>
+        <isBad>false</isBad>
+    </HediffDef>
+    <HediffDef>
+        <defName>Gamma_Recovery</defName>
+        <label>recovery mode</label>
+        <description>E-102 has activated self repair; Damage sustained is being recovered.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.52, 1, 0.95)</defaultLabelColor>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+            <li Class="Bastion.Bastion_MechRepair_CompProperties">
+                <Factor>25</Factor>
+            </li>
+        </comps>
+        <isBad>false</isBad>
+    </HediffDef>
+</Defs>

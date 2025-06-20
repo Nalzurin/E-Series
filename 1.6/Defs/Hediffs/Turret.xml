@@ -1,0 +1,17 @@
+<Defs>
+  <HediffDef>
+    <defName>Bastion_Turret</defName>
+    <label>sentry mode</label>
+    <description>E-54 has activated Siege Protocols. They are immobile in this form, but their armor and weaponry is enhanced.</description>
+    <hediffClass>Bastion.Bastion_TurretHediff</hediffClass>
+    <defaultLabelColor>(0.52, 1, 0.95)</defaultLabelColor>
+    <stages>
+      <li>
+        <statFactors>
+          <IncomingDamageFactor>0.5</IncomingDamageFactor>
+        </statFactors>
+      </li>
+    </stages>
+    <isBad>false</isBad>
+  </HediffDef>
+</Defs>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!-- ========== Bastion ========== -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Mech_Bastion"]/mechEnabledWorkTypes</xpath>
+		<value>
+      <mechEnabledWorkTypes>
+        <li>Construction</li>
+        <li>Mining</li>
+        <li>Hauling</li>
+        <li>Handling</li>
+        <li>Warden</li>
+        <li>Hunting</li>
+      </mechEnabledWorkTypes>
+		</value>
+	</Operation>
+  <!-- ========== Gamma ========== -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Mech_Gamma"]/mechEnabledWorkTypes</xpath>
+    <value>
+      <mechEnabledWorkTypes>
+        <li>Mining</li>
+        <li>Hauling</li>
+        <li>Handling</li>
+        <li>Construction</li>
+        <li>Warden</li>
+        <li>Hunting</li>
+      </mechEnabledWorkTypes>
+    </value>
+  </Operation>
+</Patch>

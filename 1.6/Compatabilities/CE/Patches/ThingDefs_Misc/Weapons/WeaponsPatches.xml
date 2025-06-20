@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- === Tools === -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>
+      /Defs/ThingDef[
+      defName = "Bastion_ArmGammaGun" or
+      defName = "Bastion_ReconArmGun" or
+      defName = "Bastion_Minigun"]/tools
+    </xpath>
+    <value>
+      <tools>
+        <li Class="CombatExtended.ToolCE">
+          <label>barrel</label>
+          <capacities>
+            <li>Blunt</li>
+          </capacities>
+          <power>5</power>
+          <cooldownTime>2.02</cooldownTime>
+          <armorPenetrationBlunt>1.630</armorPenetrationBlunt>
+          <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>muzzle</label>
+          <capacities>
+            <li>Poke</li>
+          </capacities>
+          <power>10</power>
+          <cooldownTime>1.55</cooldownTime>
+          <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+          <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+        </li>
+      </tools>
+    </value>
+  </Operation>
+
+  <!-- === Bastion Arm gun === -->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>Bastion_ReconArmGun</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.04</ShotSpread>
+      <SwayFactor>0.89</SwayFactor>
+      <Bulk>10.5</Bulk>
+      <Mass>5.2</Mass>
+      <RangedWeapon_Cooldown>1.65</RangedWeapon_Cooldown>
+    </statBases>
+    <Properties>
+      <recoilAmount>2.27</recoilAmount>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_357Magnum_FMJ</defaultProjectile>
+      <warmupTime>0.9</warmupTime>
+      <range>22.9</range>
+      <burstShotCount>6</burstShotCount>
+      <ticksBetweenBurstShots>11</ticksBetweenBurstShots>
+      <soundCast>Shot_HeavySMG</soundCast>
+      <soundCastTail>GunTail_Heavy</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>30</magazineSize>
+      <reloadTime>4</reloadTime>
+      <ammoSet>AmmoSet_357Magnum</ammoSet>
+    </AmmoUser>
+    <FireModes>
+      <aimedBurstShotCount>3</aimedBurstShotCount>
+      <aiUseBurstMode>TRUE</aiUseBurstMode>
+      <aiAimMode>Snapshot</aiAimMode>
+    </FireModes>
+    <weaponTags>
+      <li>CE_AI_BROOM</li>
+      <li>NoSwitch</li>
+    </weaponTags>
+  </Operation>
+  <!-- === Bastion Sentry gun === -->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>Bastion_Minigun</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.1</ShotSpread>
+      <SwayFactor>1.88</SwayFactor>
+      <Bulk>30.5</Bulk>
+      <Mass>20.2</Mass>
+      <RangedWeapon_Cooldown>2.3</RangedWeapon_Cooldown>
+    </statBases>
+    <Properties>
+      <recoilAmount>1.2</recoilAmount>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bastion_Minigun_Bullet</defaultProjectile>
+      <warmupTime>2.5</warmupTime>
+      <range>30.9</range>
+      <burstShotCount>25</burstShotCount>
+      <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+      <soundCast>Shot_Minigun</soundCast>
+      <soundCastTail>GunTail_Medium</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>200</magazineSize>
+      <reloadTime>12</reloadTime>
+      <ammoSet>AmmoSet_762x51mmNATO</ammoSet>
+    </AmmoUser>
+    <FireModes>
+      <aimedBurstShotCount>12</aimedBurstShotCount>
+      <aiUseBurstMode>TRUE</aiUseBurstMode>
+      <aiAimMode>Snapshot</aiAimMode>
+    </FireModes>
+    <weaponTags>
+      <li>CE_AI_AR</li>
+
+    </weaponTags>
+  </Operation>
+  <!-- === Gamma arm gun === -->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>Bastion_ArmGammaGun</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>1</SwayFactor>
+      <Bulk>30.5</Bulk>
+      <RangedWeapon_Cooldown>1.7</RangedWeapon_Cooldown>
+    </statBases>
+    <Properties>
+      <recoilAmount>1.2</recoilAmount>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_90mmRCR_HEAT</defaultProjectile>
+      <warmupTime>1.7</warmupTime>
+      <range>35</range>
+      <soundCast>Shot_ChargeBlaster</soundCast>
+      <soundCastTail>GunTail_Heavy</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>15</magazineSize>
+      <reloadTime>8</reloadTime>
+      <ammoSet>AmmoSet_90mmRecoilless</ammoSet>
+    </AmmoUser>
+    <FireModes>
+      <aiAimMode>AimedShot</aiAimMode>
+    </FireModes>
+    <weaponTags>
+      <li>NoSwitch</li>
+    </weaponTags>
+  </Operation>
+
+</Patch>

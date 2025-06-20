@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <QuestScriptDef>
+    <defName>OpportunitySite_UniqueMechSite</defName>
+    <rootSelectionWeight>1</rootSelectionWeight>
+    <rootMinPoints>0</rootMinPoints>
+    <isRootSpecial>true</isRootSpecial>
+    <autoAccept>true</autoAccept>
+    <minRefireDays>20</minRefireDays>
+
+    <questNameRules>
+      <rulesStrings>
+        <li>questName->Unique mechanoid wreck</li>
+      </rulesStrings>
+    </questNameRules>
+    <questDescriptionRules>
+      <rulesStrings>
+        <li>questDescription->A passing traveler told you that a unique mechanoid wreck was spotted nearby. There appear to be some unknown threat around the wreck.</li>
+      </rulesStrings>
+    </questDescriptionRules>
+    <root Class="Bastion.QuestNode_Root_UniqueMechSite" />
+  </QuestScriptDef>
+</Defs>
