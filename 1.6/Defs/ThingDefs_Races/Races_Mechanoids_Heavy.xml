@@ -213,7 +213,7 @@
       </li>
     </lifeStages>
     <weaponTags>
-      <li>Bastion_GammaGun</li>
+        <li>BastionGammaGun</li>
     </weaponTags>
   </PawnKindDef>
 

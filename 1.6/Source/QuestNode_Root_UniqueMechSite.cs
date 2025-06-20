@@ -104,7 +104,7 @@ namespace Bastion
             return false;
         }
 
-        private bool TryFindSiteTile(out int tile)
+        private bool TryFindSiteTile(out PlanetTile tile)
         {
             return TileFinder.TryFindNewSiteTile(out tile, MinDistanceFromColony, MaxDistanceFromColony);
         }
