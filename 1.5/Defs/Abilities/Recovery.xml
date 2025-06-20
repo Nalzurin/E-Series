@@ -1,0 +1,36 @@
+<Defs>
+    <AbilityDef ParentName="Bastion_BaseAbility">
+        <defName>Bastion_Recovery</defName>
+        <label>Self-Repair</label>
+        <description>Initiate the E-54's internal repair systems, allowing it to recover from damage sustained over a short period.</description>
+        <iconPath>Bastion/Other/selfrepair_icon</iconPath>
+        <cooldownTicksRange>42000</cooldownTicksRange>
+        <statBases>
+            <Ability_Duration>60</Ability_Duration>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>Bastion_Recovery</hediffDef>
+                <onlyApplyToSelf>true</onlyApplyToSelf>
+            </li>
+        </comps>
+    </AbilityDef>
+    <AbilityDef ParentName="Bastion_BaseAbility">
+        <defName>Gamma_Recovery</defName>
+        <label>Self-Repair</label>
+        <description>Initiate the E-102's internal repair systems, allowing it to recover from damage sustained over a short period.</description>
+        <iconPath>Bastion/Other/selfrepair_icon</iconPath>
+        <cooldownTicksRange>42000</cooldownTicksRange>
+        <statBases>
+            <Ability_Duration>60</Ability_Duration>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>Gamma_Recovery</hediffDef>
+                <onlyApplyToSelf>true</onlyApplyToSelf>
+            </li>
+        </comps>
+    </AbilityDef>
+</Defs>

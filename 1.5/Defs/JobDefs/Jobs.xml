@@ -1,0 +1,8 @@
+<Defs>
+    <JobDef>
+        <defName>Bastion_RestoreMechJunk</defName>
+        <driverClass>Bastion.Bastion_JobDriver_RestoreJunk</driverClass>
+        <reportString>restoring TargetA.</reportString>
+        <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+    </JobDef>
+</Defs>

@@ -1,0 +1,10 @@
+<Defs>
+    <AbilityDef ParentName="Bastion_BaseAbility">
+        <defName>Bastion_CancelTurret</defName>
+        <label>Cancel sentry mode</label>
+        <description>Deactivate E-54's siege Protocols, returning bastion to humanoid form.</description>
+        <iconPath>Bastion/Other/cancelturretmode_icon</iconPath>
+        <cooldownTicksRange>0</cooldownTicksRange>
+        <abilityClass>Bastion.Bastion_CancelTurretAbility</abilityClass>
+    </AbilityDef>
+</Defs>

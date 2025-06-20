@@ -1,0 +1,10 @@
+<Defs>
+    <AbilityDef ParentName="Bastion_BaseAbility">
+        <defName>Bastion_Turret</defName>
+        <label>Sentry mode</label>
+        <description>Activate E-54's siege Protocols. They are immobile in this form, but their armor and weaponry is enhanced.</description>
+        <iconPath>Bastion/Other/turretmode_icon</iconPath>
+        <cooldownTicksRange>0</cooldownTicksRange>
+        <abilityClass>Bastion.Bastion_TurretAbility</abilityClass>
+    </AbilityDef>
+</Defs>

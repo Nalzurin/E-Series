@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <WorkGiverDef>
+    <defName>Bastion_RestoreJunk</defName>
+    <label>restore ancient mechanoid junks</label>
+    <giverClass>Bastion.Bastion_WorkGiver_RestoreJunk</giverClass>
+    <workType>Smithing</workType>
+    <verb>restore</verb>
+    <gerund>restoring</gerund>
+    <priorityInType>70</priorityInType>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+</Defs>

@@ -1,0 +1,17 @@
+<Defs>
+    <AbilityDef Name="Bastion_BaseAbility" Abstract="true">
+        <hostile>false</hostile>
+        <targetRequired>false</targetRequired>
+        <canUseAoeToGetTargets>false</canUseAoeToGetTargets>
+        <statBases>
+            <Ability_EffectRadius>0</Ability_EffectRadius>
+        </statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <warmupTime>0</warmupTime>
+            <range>0</range>
+            <drawAimPie>false</drawAimPie>
+            <requireLineOfSight>false</requireLineOfSight>
+        </verbProperties>
+    </AbilityDef>
+</Defs>

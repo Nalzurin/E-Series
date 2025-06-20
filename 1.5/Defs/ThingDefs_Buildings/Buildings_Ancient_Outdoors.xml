@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>  
+
+  <ThingDef ParentName="NonDeconstructibleAncientBuildingBase">
+    <defName>Bastion_AncientBastionJunk</defName>
+    <label>Ancient Colony Mechanoid Junk</label>
+    <description>The remains of a E-54 colony defense unit.\nThe interior generator looks rusted out; It could probably be restored by a mechanitor with a few advanced components.</description>
+    <rotatable>false</rotatable>
+    <graphicData>
+      <texPath>Bastion/Other/junkBastion</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.25,1.25)</drawSize>
+    </graphicData>
+    <size>(1,1)</size>
+    <tickerType>Normal</tickerType>
+    <fillPercent>0.5</fillPercent>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <statBases>
+      <Mass>5</Mass>
+    </statBases>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsSpecial</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_ProximityLetter">
+        <radius>10</radius>
+        <letterDef>PositiveEvent</letterDef>
+        <letterLabel>Ancient mech</letterLabel>
+        <letterText>One of your colonists spotted an ancient colony defense mechanoid! Maybe you could bring it back to working order.</letterText>
+      </li>
+      <li Class="Bastion.Bastion_AncientJunk_CompProperties">
+        <mechDef>Mech_Bastion</mechDef>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="NonDeconstructibleAncientBuildingBase">
+    <defName>Bastion_AncientGammaJunk</defName>
+    <label>Ancient Colony Mechanoid Junk</label>
+    <description>The remains of a E-102 Headhunter unit.\nThe AI Persona Core seems inoperable.\nIt could probably be restored by a mechanitor with the right materials.</description>
+    <rotatable>false</rotatable>
+    <graphicData>
+      <texPath>Bastion/Other/junkGamma</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.25,1.25)</drawSize>
+    </graphicData>
+    <size>(1,1)</size>
+    <tickerType>Normal</tickerType>
+    <fillPercent>0.5</fillPercent>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <statBases>
+      <Mass>5</Mass>
+    </statBases>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsSpecial</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_ProximityLetter">
+        <radius>10</radius>
+        <letterDef>PositiveEvent</letterDef>
+        <letterLabel>Ancient mech</letterLabel>
+        <letterText>One of your colonists spotted an ancient colony defense mechanoid! Maybe you could bring it back to working order.</letterText>
+      </li>
+      <li Class="Bastion.Bastion_AncientJunk_CompProperties">
+        <mechDef>Mech_Gamma</mechDef>
+      </li>
+    </comps>
+  </ThingDef>
+  
+</Defs>

@@ -1,0 +1,56 @@
+<Defs>
+    <GenStepDef>
+        <defName>GenStep_AncientBastionJunk</defName>
+        <order>1600</order>
+        <genStep Class="Bastion.GenStep_ScatterChance">
+            <count>1</count>
+            <chance>0.05</chance>
+            <allowMechanoidDatacoreReadOrLost>false</allowMechanoidDatacoreReadOrLost>
+            <validators>
+                <li Class="ScattererValidator_Buildable">
+                    <radius>2</radius>
+                    <affordance>Light</affordance>
+                </li>
+            </validators>
+            <allowRoofed>false</allowRoofed>
+            <minEdgeDistPct>0.166667</minEdgeDistPct>
+            <minDistToPlayerStartPct>0.333</minDistToPlayerStartPct>
+            <allowFoggedPositions>false</allowFoggedPositions>
+            <onlyOnStartingMap>false</onlyOnStartingMap>
+            <layout>
+                <li>
+                    <thing>Bastion_AncientBastionJunk</thing>
+                    <filthDef>Filth_MachineBits</filthDef>
+                    <filthExpandBy>1</filthExpandBy>
+                </li>
+            </layout>
+        </genStep>
+    </GenStepDef>
+    <GenStepDef>
+        <defName>GenStep_AncientGammaJunk</defName>
+        <order>1601</order>
+        <genStep Class="Bastion.GenStep_ScatterChance">
+            <count>1</count>
+            <chance>0.01</chance>
+            <allowMechanoidDatacoreReadOrLost>false</allowMechanoidDatacoreReadOrLost>
+            <validators>
+                <li Class="ScattererValidator_Buildable">
+                    <radius>2</radius>
+                    <affordance>Light</affordance>
+                </li>
+            </validators>
+            <allowRoofed>false</allowRoofed>
+            <minEdgeDistPct>0.166667</minEdgeDistPct>
+            <minDistToPlayerStartPct>0.333</minDistToPlayerStartPct>
+            <allowFoggedPositions>false</allowFoggedPositions>
+            <onlyOnStartingMap>false</onlyOnStartingMap>
+            <layout>
+                <li>
+                    <thing>Bastion_AncientGammaJunk</thing>
+                    <filthDef>Filth_MachineBits</filthDef>
+                    <filthExpandBy>1</filthExpandBy>
+                </li>
+            </layout>
+        </genStep>
+    </GenStepDef>
+</Defs>

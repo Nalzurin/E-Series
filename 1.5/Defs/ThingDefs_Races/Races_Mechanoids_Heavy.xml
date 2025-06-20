@@ -1,0 +1,223 @@
+<Defs>
+  <!--Bastion colony-->
+  <ThingDef Name="Mech_Bastion" ParentName="HeavyMechanoid">
+    <defName>Mech_Bastion</defName>
+    <label>E-54</label>
+    <description>An ancient, man-made mechanoid designed for colony defense on hostile worlds. Designed with the ability to self-maintain, switch between stationary heavy and mobile recon modes; E-54 units are scarce, but valuable assets.</description>
+     <tools>
+      <li>
+        <label>mechanical head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+      </li>
+    </tools>
+    <statBases>
+      <MoveSpeed>1.9</MoveSpeed>
+      <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.80</ArmorRating_Sharp>
+      <BandwidthCost>0</BandwidthCost>
+      <!-- probably should change -->
+      <WorkSpeedGlobal>0.25</WorkSpeedGlobal>
+      <MechRepairSpeed>0.1</MechRepairSpeed>
+      <MechEnergyUsageFactor>0.4</MechEnergyUsageFactor>
+    </statBases>
+    <race>
+      <body>Mech_Bastion</body>
+      <baseBodySize>1.5</baseBodySize>
+      <baseHealthScale>4.0</baseHealthScale>
+      <renderTree>Bastion</renderTree>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Tunneler_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Tunneler_Death</soundDeath>
+          <soundCall>Pawn_Mech_Tunneler_Call</soundCall>
+        </li>
+      </lifeStageAges>
+      <bulletStaggerEffecterDef>TunnelerSlowedDown</bulletStaggerEffecterDef>
+      <mechEnabledWorkTypes>
+        <li>Construction</li>
+        <li>Mining</li>
+        <li>Hauling</li>
+      </mechEnabledWorkTypes>
+    </race>
+    <comps>
+      <li Class="Bastion.SelfControlGroup_CompProperties" />
+    </comps>
+  </ThingDef>
+
+  <PawnKindDef Name="Mech_Bastion_BaseKind" ParentName="HeavyMechanoidKind" Abstract="true">
+    <label>E-54</label>
+    <race>Mech_Bastion</race>
+    <combatPower>250</combatPower>
+    <weaponMoney>99999~99999</weaponMoney>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="Mech_Bastion_BaseKind">
+    <defName>Mech_Bastion</defName>
+    <defaultFactionType>PlayerColony</defaultFactionType>
+    <allowInMechClusters>false</allowInMechClusters>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Bastion/Mech/Bastion</texPath>
+          <shaderType>Cutout</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.5</drawSize>
+          <shadowData>
+            <volume>(0.6, 0.8, 0.6)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <abilities>
+      <li>Bastion_Recovery</li>
+      <li>Bastion_Turret</li>
+    </abilities>
+    <weaponTags>
+      <li>BastionReconArmGun</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="Mech_Bastion_BaseKind">
+    <defName>Mech_Bastion_B</defName>
+    <label>M-54</label>
+    <allowInMechClusters>true</allowInMechClusters>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Bastion/Mech/Beta/mech</texPath>
+          <shaderType>Cutout</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.5</drawSize>
+          <shadowData>
+            <volume>(0.6, 0.8, 0.6)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponTags>
+      <li>Bastion_ReconArmGun_B</li>
+    </weaponTags>
+  </PawnKindDef>
+  
+  <!--Gamma colony-->
+  <ThingDef Name="Mech_Gamma" ParentName="HeavyMechanoid">
+    <defName>Mech_Gamma</defName>
+    <label>E-102</label>
+    <description>An ancient, man-made mechanoid designed for engaging heavily armored targets. Comes with the ability to self-maintain, quickly reposition itself by using a self-charging jump pack; E-54 units are scarce, but valuable assets.</description>
+    <tools>
+      <li>
+        <label>mechanical head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+      </li>
+    </tools>
+    <statBases>
+      <MoveSpeed>3</MoveSpeed>
+      <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.5</ArmorRating_Sharp>
+      <BandwidthCost>0</BandwidthCost>
+      <!-- probably should change -->
+      <WorkSpeedGlobal>0.25</WorkSpeedGlobal>
+      <MechRepairSpeed>0.1</MechRepairSpeed>
+      <MechEnergyUsageFactor>0.2</MechEnergyUsageFactor>
+    </statBases>
+    <race>
+      <body>Mech_Gamma</body>
+      <baseBodySize>1.5</baseBodySize>
+      <baseHealthScale>4.0</baseHealthScale>
+      <deathAction>
+        <workerClass>Bastion.DeathActionWorker_SpawnCritter</workerClass>
+      </deathAction>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Tunneler_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Tunneler_Death</soundDeath>
+          <soundCall>Pawn_Mech_Tunneler_Call</soundCall>
+        </li>
+      </lifeStageAges>
+      <bulletStaggerEffecterDef>TunnelerSlowedDown</bulletStaggerEffecterDef>
+      <mechEnabledWorkTypes>
+        <li>Mining</li>
+        <li>Hauling</li>
+        <li>Construction</li>
+      </mechEnabledWorkTypes>
+    </race>
+    <comps>
+      <li Class="Bastion.SelfControlGroup_CompProperties" />
+    </comps>
+  </ThingDef>
+
+  <PawnKindDef Name="Mech_Gamma_BaseKind" ParentName="HeavyMechanoidKind" Abstract="true">
+    <label>E-102</label>
+    <race>Mech_Gamma</race>
+    <combatPower>300</combatPower>
+    <weaponMoney>99999~99999</weaponMoney>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="Mech_Gamma_BaseKind">
+    <defName>Mech_Gamma</defName>
+    <defaultFactionType>PlayerColony</defaultFactionType>
+    <allowInMechClusters>false</allowInMechClusters>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Bastion/Mech/Gamma</texPath>
+          <shaderType>Cutout</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.5</drawSize>
+          <shadowData>
+            <volume>(0.6, 0.8, 0.6)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <abilities>
+      <li>Gamma_Recovery</li>
+      <li>LongjumpMechLauncher</li>
+    </abilities>
+    <weaponTags>
+      <li>BastionGammaGun</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="Mech_Gamma_BaseKind">
+    <defName>Mech_Gamma_B</defName>
+    <label>M-102</label>
+    <allowInMechClusters>true</allowInMechClusters>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Bastion/Mech/Beta/mech_gamma</texPath>
+          <shaderType>Cutout</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.5</drawSize>
+          <shadowData>
+            <volume>(0.6, 0.8, 0.6)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponTags>
+      <li>Bastion_GammaGun</li>
+    </weaponTags>
+  </PawnKindDef>
+
+
+
+
+</Defs>
